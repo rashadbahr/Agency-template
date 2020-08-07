@@ -728,13 +728,13 @@ footer .conrad p {
 }
 
 footer .conrad input {
-    display: block;
+    display: -webkit-inline-box;
     background: none;  
     outline: 0;
-    padding: 10px 75px;
+    padding: 10px 65px;
     color: snow;
     margin-bottom: 2%;
-    text-align: center;
+    text-align: left;
 }
 
 footer .conrad input[type=email] , footer .conrad input[type=text] {
@@ -746,6 +746,7 @@ footer .conrad input[type=email] , footer .conrad input[type=text] {
 footer .conrad input[type=submit] {
     font-size: 1.2em;
     border: 1px solid;
+    border-radius: 8px;
     cursor: pointer;
     text-align: center;
 }
