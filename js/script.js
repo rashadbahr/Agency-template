@@ -21,7 +21,7 @@ $(function(){
         }
     });
 
-    $('.one').css('display','block')
+        $('.one').css('display','block')
 
     $('.acordion h3').click(function(){
 

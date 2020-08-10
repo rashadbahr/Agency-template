@@ -1,18 +1,18 @@
 * , *:after, *:before {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Acme', sans-serif;
+    min-height: 100%;
 }
 
 .container {
     width: 85%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 
@@ -154,7 +154,7 @@ header {
     left: 0;
     top: 0;
     z-index: 5555;
-    padding-left: 8.5%;
+    padding-left: 3.5%;
 }
 
 section.head div.logo {
@@ -171,6 +171,8 @@ section.head nav.navbar {
     width: 50%;
     float: left;
     font-size: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 section.head nav ul li {
@@ -229,6 +231,30 @@ section.head div.text p:last-child:hover span {
     display: inline-block;
     transform: rotate(360deg);
 }
+
+@media screen and (max-width : 991px) {
+    section.head {
+        width: 100%;
+        height: 626px;
+    }
+    section.head div.text {
+        font-size: 0.7em;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.head {
+        width: 100%;
+        height: 626px;
+    }
+    section.head div.text {
+        margin-top: 3%;
+        font-size: 0.7em;
+    }
+
+}
+
 
 /*about section*/
 
@@ -317,6 +343,46 @@ section.about .office p {
     font-size: 18px;
 }
 
+
+@media screen and (max-width : 991px) {
+    
+    section.about .creative {
+        width: 30%;
+        float: left;
+    }
+    section.about .awsemoe {
+        width: 30%;
+        float: left;
+    }
+    section.about .office {
+        width: 30%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.about {
+        width: 100%;
+        height: 1390px;
+    }
+    section.about .creative {
+        width: 100%;
+        float: none;
+        padding-bottom: 20px;
+
+    }
+    section.about .awsemoe {
+        width: 100%;
+        float: none;
+        padding-bottom: 35px;
+    }
+    section.about .office {
+        width: 100%;
+        float: none;
+    }
+}
+
+
 /*folio*/
 
 section.folio {
@@ -380,6 +446,21 @@ section.folio .folio-part button:hover {
     background-color: rgba(0, 132, 255, 0.623);
     border: 2px solid black;
     color: black;
+}
+
+
+@media screen and (max-width : 991px) {
+    section.folio {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.folio {
+        width: 100%;
+        height: 890px;
+        background-attachment: local;
+    }
 }
 
 /*solution*/
@@ -447,6 +528,36 @@ section.solution .acordion p {
     color: black;
     padding: 20px;
     display: none;
+}
+
+@media screen and (max-width : 991px) {
+    section.solution {
+        height: 650px;
+    }
+    section.solution .tailor {
+        width: 100%;
+        float: left;
+    }
+
+    section.solution .acordion {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.solution {
+        height: 730px;
+    }
+    section.solution .tailor {
+        width: 100%;
+        float: left;
+    }
+
+    section.solution .acordion {
+        width: 100%;
+        float: left;
+    }
 }
 
 /*study*/
@@ -535,11 +646,62 @@ section.study .download .number .right span {
 }
 
 
+@media screen and (max-width : 991px) {
+    section.study {
+        width: 100%;
+    }
+    section.study .app {
+        width: 100%;
+        float: left;
+        height: 400px;
+        padding-top: 50px;
+    }
+    section.study .download {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.study {
+        width: 100%;
+        height: 555px;
+    }
+    section.study .app {
+        width: 100%;
+        float: left;
+        margin: 0 0 5px 0;
+        height: 550px;
+    }
+    section.study .download {
+        width: 100%;
+        float: left;
+        background-image: url(../images/slide-1-fs.jpg);
+        background-size: cover;
+        background-attachment: local;
+    }  
+
+    section.study .download .number {
+        width: 80%;
+        padding-top: 40px;         
+    }
+    section.study .download .number .left {
+        width: 50%;
+        float: left;
+    }
+    
+    section.study .download .number .right {
+        width: 50%;
+        float: left;
+    }
+
+}
+
 /*recent*/
 
 section.recent{
     width: 100%;
-    padding: 50px 0 980px 0 ;
+    padding: 50px 0 980px 0;
 }
 
 section.recent .center {
@@ -575,67 +737,146 @@ section.recent .center nav span:hover {
 section.recent .all-img .left {
     width: 50%;
     float: left;
+    background: #0073b9;
 }
 
 section.recent .all-img .left .div1 {
     width: 50%;
     float: left;
+    background: #fd0194;
 }
 
 section.recent .all-img .left .div1 img {
     width: 100%;
+    background: #fd0194;
 }
 
 section.recent .all-img .left .div2 {
     width: 50%;
     float: left;
+    background: #0e55c1;
 }
 
 section.recent .all-img .left .div2 img {
     width: 100%;
+    background: #0e55c1;
 }
 
 section.recent .all-img .right {
     width: 50%;
     float: left;
+    background: #fd0194;
 }
 
 section.recent .all-img .right .div1 {
     width: 100%;
+    background: #fd0194;
 }
 
 section.recent .all-img .right .div1 img {
     width: 100%;
     height: 710px;
+    background: #0e55c1;
 }
 
 section.recent .all-img .right .div2 {
     width: 100%;
     display: flex;
+    background: #fd0194;
 }
 
 section.recent .all-img .right .div2 img:nth-of-type(1) {
     width: 100%;
     float: left;
+    background: #fd0194;
 }
 
 section.recent .all-img .right .div2 img:nth-of-type(2) {
     width: 100%;
     float: left;
+    background: #0e55c1;
 }
 
 section.recent .all-img .mix {
     display: none;
 }
 
+@media screen and (max-width : 991px) {
+    section.recent {
+        width: 100%;
+        padding: 430px 0 0 0 ;
+    }
+
+    section.recent .all-img .mix {
+        display: block;
+    }
+
+    section.recent .all-img .left {
+        width: 100%;
+        float: left;
+    }
+    section.recent .all-img .right {
+        width: 100%;
+    }
+    section.recent .all-img .right .div1 {
+        width: 100%;
+    }
+    section.recent .all-img .right .div2 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.recent {
+        width: 100%;
+        text-align: center;
+    }
+
+    section.recent .center h2 {
+        font-size: 2.5em;
+    }
+
+    section.recent .all-img .mix {
+        display: block;
+    }
+
+    section.recent .all-img .left {
+        width: 100%;
+        float: left;
+    }
+    section.recent .all-img .left .div1 {
+        width: 50%;
+        float: left;
+    }
+
+    section.recent .all-img .left .div2 {
+        width: 50%;
+        float: left;
+    }
+    section.recent .all-img .right{
+        width: 100%;
+        float: left;
+    }
+
+    section.recent .all-img .right .div1 img {
+        display: block;
+        width: 100%;
+        height: 375px;
+    }
+    section.recent .all-img .right .div2 {
+        width: 100%;
+        float: left;
+    }
+}
+
 /*clients*/
 
 section.clients {
     width: 100%;
-    height: 350px;
+    height: 280px;
     clear: both;
-    margin-top: 20%;
-    padding: 55px 0 30px 0;
+    margin-top: 10%;
+    padding: 40px 0 0 0;
     background: #fd0194;
     color: snow;
 }
@@ -672,36 +913,82 @@ section.clients .client span {
     text-shadow: 1px 2px black;
 }
 
+@media screen and (min-width: 768px) and (max-width : 991px) {
+    section.clients {
+        width: 100%;
+        height: 290px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.clients {
+        width: 100%;
+        height: 850px;
+        display: block;
+        padding: 35px 0 30px 0;
+    }
+    section.clients .client h2 {
+        width: 100%;
+        float: none;
+        font-size: 70px;
+    }
+
+    section.clients .client:nth-of-type(2) {
+        width: 100%;
+        float: left;
+        text-align: -moz-left;
+    }
+    section.clients .client:nth-of-type(3) {
+        width: 100%;
+        float: left;
+        text-align: -moz-right;
+    }
+    section.clients .client:nth-of-type(4) {
+        width: 100%;
+        float: left;
+        text-align: -moz-left;
+    }
+    section.clients .client:nth-of-type(5) {
+        width: 100%;
+        float: left;
+        text-align: -moz-right;
+    }
+}
+
+
 /*footer*/
 
-footer {
+section.end {
+
     width: 100%;
-    height: 350px;
+    height: 280px;
     padding-top: 30px;
     background: #0e55c1;
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 
-footer .conrad {
+section.end .componant {
     width: 25%;
     float: left;
+    text-align: center;
 }
 
-footer .conrad h2 {
+section.end .componant h2 {
     color: #fd0194;
     font-size: 50px;
+    text-transform: capitalize;
     text-shadow: 2px 3px black;
     transition: 0.5s;
 }
 
-footer .conrad:hover h2 {
+section.end .componant:hover h2 {
     color: black;
     font-size: 65px;
     text-shadow: 3px 3px #fd0194;
 }
 
-footer .conrad h3 {
+section.end .componant h3 {
     color: snow;
     line-height: 2;
     font-size: 35px;
@@ -709,7 +996,7 @@ footer .conrad h3 {
     text-shadow: 2px 3px black;
 }
 
-footer .conrad a {
+section.end .componant a {
     display: block;
     line-height: 1.5;
     text-decoration: none;
@@ -719,7 +1006,7 @@ footer .conrad a {
     text-transform: capitalize;  
 }
 
-footer .conrad p {
+section.end .componant p {
     line-height: 1.5;
     color: snow;
     font-size: 20px;
@@ -727,23 +1014,23 @@ footer .conrad p {
     text-transform: capitalize;  
 }
 
-footer .conrad input {
+section.end .componant input {
     display: -webkit-inline-box;
     background: none;  
     outline: 0;
-    padding: 10px 65px;
+    padding: 10px 30px;
     color: snow;
     margin-bottom: 2%;
     text-align: left;
 }
 
-footer .conrad input[type=email] , footer .conrad input[type=text] {
+section.end .componant input[type=email] , section.end .componant input[type=text] {
     border: 0;
     border-bottom: 1px solid black;
     text-align: center;
 }
 
-footer .conrad input[type=submit] {
+section.end .componant input[type=submit] {
     font-size: 1.2em;
     border: 1px solid;
     border-radius: 8px;
@@ -751,33 +1038,98 @@ footer .conrad input[type=submit] {
     text-align: center;
 }
 
-footer .footer {
+@media screen and (max-width : 1024px) {
+    section.end {
+        width: 100%;
+        height: 370px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    section.end {
+        width: 100%;
+        height: 750px;
+    }
+
+    section.end .componant:nth-child(1){
+        width: 100%;
+        float: left;
+        margin-bottom: 22px;
+    }
+    section.end .componant:nth-child(2){
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+    section.end .componant:nth-child(3){
+        width: 100%;
+        float: left;
+        margin-bottom: 30px;
+    }
+    section.end .componant:nth-child(4){
+        width: 100%;
+        float: left;
+    }
+}
+
+/*end two*/
+
+footer.endTwo {
     width: 100%;
     height: 70px;
     background: black;
-    position: absolute;
-    bottom: 0;
     line-height: 70px;
+    position: sticky;
 }
 
-footer .footer .left {
+footer.endTwo .endbar .left{
     float: left;
 }
 
-footer .footer .left i {
+footer.endTwo .endbar .left i {
     color: snow;
     padding-left: 10px;
 }
 
-footer .footer .left span {
+footer.endTwo .endbar .left span {
     color: snow;
 }
 
-footer .footer .right {
+footer.endTwo .endbar .right {
     float: right;
 }
 
-footer .footer .right a {
+footer.endTwo .endbar .right a {
     text-decoration: none;
     color: snow;
+}
+
+
+@media screen and (max-width : 1024px) {
+    footer.endTwo {
+        width: 100%;
+    }
+  
+    footer.endTwo .endbar .left{
+        float: left;
+    }
+
+    footer.endTwo .endbar .right{
+        float: right;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width : 767px) {
+    footer.endTwo {
+        width: 100%;
+    }
+  
+    footer.endTwo .endbar .left{
+        float: left;
+    }
+
+    footer.endTwo .endbar .right{
+        float: right;
+    }
 }
